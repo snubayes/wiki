@@ -1,5 +1,5 @@
 const path = require("path");
-const pathPrefix = "/";
+const pathPrefix = "/wiki/";
 // Change me
 const siteMetadata = {
   title: "Foam Template for Gatsby Theme Primer Wiki",
@@ -33,8 +33,7 @@ module.exports = {
           //   url: "https://twitter.com/theowenyoung",
           // },
         ],
-        editUrl:
-          "https://github.com/snubayes/wiki/",
+        editUrl: "https://github.com/snubayes/wiki/",
         sidebarDepth: 1,
         searchBody: true,
         shouldShowTagGroupsOnIndex: false,
