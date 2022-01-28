@@ -35,7 +35,7 @@ module.exports = {
         ],
         editUrl:
           "https://github.com/snubayes/wiki/",
-        sidebarDepth: 2,
+        sidebarDepth: 1,
         searchBody: true,
         shouldShowTagGroupsOnIndex: false,
       },
