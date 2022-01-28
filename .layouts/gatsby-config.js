@@ -33,7 +33,7 @@ module.exports = {
           //   url: "https://twitter.com/theowenyoung",
           // },
         ],
-        editUrl: "https://github.com/snubayes/wiki/",
+        editUrl: "https://github.com/snubayes/wiki/blob/main/",
         sidebarDepth: 1,
         searchBody: true,
         shouldShowTagGroupsOnIndex: false,

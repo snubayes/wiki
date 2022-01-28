@@ -1,4 +1,4 @@
-# SNUBAYES WiKi
+# SNUBAYES WIKI
 
 ## 1 Introduction
 
