@@ -1,5 +1,5 @@
 const path = require("path");
-const pathPrefix = "/wiki/";
+const pathPrefix = "/";
 // Change me
 const siteMetadata = {
   title: "Foam Template for Gatsby Theme Primer Wiki",
@@ -12,7 +12,7 @@ const siteMetadata = {
 };
 module.exports = {
   siteMetadata,
-  pathPrefix,
+  pathPrefix: `/wiki`,
   flags: {
     DEV_SSR: true,
   },
