@@ -1,7 +1,5 @@
 ---
 title: Link Reference Definitions
-tags:
-  - Link
 ---
 
 When you use `[[wiki-links]]`, the [foam-vscode](https://github.com/foambubble/foam/tree/master/packages/foam-vscode) extension can generate [Markdown Link Reference Definitions](https://spec.commonmark.org/0.29/#link-reference-definitions) at the bottom of the file.

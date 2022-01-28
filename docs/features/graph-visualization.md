@@ -1,7 +1,5 @@
 ---
 title: Graph Visualization
-tags:
-  - Graph
 ---
 
 Foam comes with a graph visualization of your notes.

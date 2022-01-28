@@ -1,7 +1,5 @@
 ---
 title: Wiki Links
-tags:
-  - Link
 ---
 
 Wiki links are the internal links that connect the files in your knowledge base.

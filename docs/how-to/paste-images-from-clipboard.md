@@ -1,8 +1,7 @@
 ---
 title: Paste Images from Clipboard
 tags:
-  - How-to
-  - VsCode
+  - Getting-Started
 ---
 
 

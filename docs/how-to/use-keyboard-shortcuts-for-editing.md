@@ -1,7 +1,7 @@
 ---
 title: Use Keyboard Shortcuts for Editing
 tags:
-  - Shortcut
+  - Getting-Started
 ---
 
 

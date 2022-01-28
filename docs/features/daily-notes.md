@@ -1,8 +1,5 @@
 ---
 title: Daily Notes
-tags:
-  - Notes
-  - Daily
 ---
 Daily notes allow you to quickly create and access notes for today.
 

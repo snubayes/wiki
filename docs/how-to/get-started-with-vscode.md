@@ -1,8 +1,6 @@
 ---
 title: Getting started with VsCode
-tags:
-  - How-to
-  - VsCode
+  - Getting-Started
 ---
 
 VsCode is a powerful text editor, hidden behind a simple interface.

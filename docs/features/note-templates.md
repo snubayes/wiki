@@ -1,9 +1,6 @@
 ---
 title: Note Templates
-tags:
-  - Templates
 ---
-
 
 You can create notes from templates by running the `Foam: Create New Note from Template` command and follow the instructions.
 

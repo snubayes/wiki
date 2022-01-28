@@ -8,7 +8,7 @@
   },
   "files.defaultLanguage": "markdown",
   "files.exclude": {
-    "**/node_modules": true,
+    "**/node_modules": false,
     "**/.cache": true
   },
   "files.watcherExclude": {

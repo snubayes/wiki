@@ -3,12 +3,12 @@ const pathPrefix = "/";
 // Change me
 const siteMetadata = {
   title: "Foam Template for Gatsby Theme Primer Wiki",
-  shortName: "Wiki",
+  shortName: "SNUBAYESWIKI",
   description:
     "Another Foam template that use gatsby-theme-primer-wiki, Welcome to your new Foam Knowledge Base!",
-  twitterName: "theowenyoung",
+  // twitterName: "theowenyoung",
   imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://demo-foam.owenyoung.com",
+  siteUrl: "https://snubayes.github.io/wiki",
 };
 module.exports = {
   siteMetadata,
@@ -26,15 +26,18 @@ module.exports = {
         nav: [
           {
             title: "Github",
-            url: "https://github.com/theowenyoung/foam-template-gatsby-theme-primer-wiki/",
+            url: "https://github.com/snubayes",
           },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/theowenyoung",
-          },
+          // {
+          //   title: "Twitter",
+          //   url: "https://twitter.com/theowenyoung",
+          // },
         ],
         editUrl:
-          "https://github.com/theowenyoung/foam-template-gatsby-theme-primer-wiki/tree/main/",
+          "https://github.com/snubayes/wiki/",
+        sidebarDepth: 2,
+        searchBody: true,
+        shouldShowTagGroupsOnIndex: false,
       },
     },
     {
