@@ -428,7 +428,7 @@ $ kill %1
 [1]  + 182201 terminated  sleep 1000
 ```
 
-![Job control](img/jobs.png)
+![Job control](../img/jobs.png)
 
 ### 6.2 프로세스 출력
 

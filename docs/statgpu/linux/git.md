@@ -108,7 +108,7 @@ Git으로 하는 일은 기본적으로 아래와 같다:
 3. `git commit` 명령을 이용해 Stage된 변경 사항들을 (별도의 메세지와 함께)
    저장소에 영구적으로 기록한다.
 
-![작업 디렉토리, Staging Area, 저장소](img/git-stages.png)
+![작업 디렉토리, Staging Area, 저장소](../img/git-stages.png)
 
 실제로 Git을 쓰면서 우리가 편집할 모든 파일들은 전부 작업 디렉토리에 속하므로,
 이에 대해 자세히 알아보자. 작업 디렉토리의 모든 파일은 크게 Tracked와
@@ -117,7 +117,7 @@ Untracked로 나뉜다. Untracked 파일은
 파일이다. Untracked 파일들은 Git이 전혀 추적하지 않기 때문에 (추적하라고 따로
 명령어를 주기 전까지는) 무슨 짓을 하더라도 계속 untracked 상태로 남는다.
 
-![파일의 라이프사이클](img/git-lifecycle.png)
+![파일의 라이프사이클](../img/git-lifecycle.png)
 
 Tracked 파일은 예전에 한번 커밋된 적이 있어 저장소에 있거나 혹은 현재 Staging
 Area에 있는 파일이다. Tracked 파일은 다시 또 Unmodified, Modified, Staged 상태

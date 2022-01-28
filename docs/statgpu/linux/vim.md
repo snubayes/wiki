@@ -37,7 +37,7 @@ Vim에는 일반(Normal), 입력(Insert), 비주얼(Visual), 명령어(Command)�
 
 일반 모드인 상태에서 :를 누르면 명령어(Command) 모드가 된다. 모드 상태를 보여주던 제일 밑줄에서 :다음에 커서가 놓이면서 명령어를 기다리는 것을 볼 수 있다. 각종 명령어를 사용하여 거의 모든 환경설정과 파일 열기(e; edit)/저장(w; write)과 종료(q; quit) 등의 작업이 가능하고 컴파일 등 외부 쉘 명령까지 실행할 수 있다.
 
-![VIM modes](img/vim-modes.png)
+![VIM modes](../img/vim-modes.png)
 
 ## 3 Vim의 대표적인 키
 
