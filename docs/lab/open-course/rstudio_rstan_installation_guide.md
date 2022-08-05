@@ -50,7 +50,7 @@ if (file.exists(".RData")) file.remove(".RData")
 install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
 ```
 
-Apple M1칩 이상의 CPU가 탑재된 MacOS 컴퓨터는 아래의 코드를 실행시켜 줍니다.
+Apple M1칩 이상의 CPU가 탑재된 MacOS 컴퓨터는 위의 코드 대신 아래의 코드를 실행시켜 줍니다.
 
 ```r
 remove.packages("rstan")
@@ -123,7 +123,7 @@ fit.indep =
 
 ## 6. 에러 발생 시
 
-[4. stanmodel object 컴파일 설정](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#4-stanmodel-object-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95) 단계에서 문제가 발생하면
+[5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)단계에서 문제가 발생하면
 아래의 코드를 실행해 Makevars 파일을 열어줍니다.
 
 ```r
