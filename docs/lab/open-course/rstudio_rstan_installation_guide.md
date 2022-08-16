@@ -72,7 +72,7 @@ if (!file.exists(dotR)) dir.create(dotR)
 M <- file.path(dotR, "Makevars")
 if (!file.exists(M)) file.create(M)
 
-if(grepl("^windows", R.version$os)){
+if(grepl("^windows", R.version$os) | grepl("^mingw", R.version$os)){
   cat("\nCXX14FLAGS += -mtune=native -O3 -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2",
       "\nCXX11FLAGS += -mtune=native -O3 -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2",
       file = M, sep = "\n", append = FALSE)
