@@ -45,16 +45,21 @@ R, RStudio 및 RStan의 정책에 따라 설치 과정이 바뀌었을 수도 �
 RStudio을 열고 새로운 R Script 파일에 아래의 코드를 작성하여 실행시켜 줍니다.
 
 ```r
-remove.packages("rstan")
 if (file.exists(".RData")) file.remove(".RData")
+remove.packages("rstan")
 install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
 ```
 
-Apple M1칩 이상의 CPU가 탑재된 MacOS 컴퓨터는 위의 코드 대신 아래의 코드를 실행시켜 줍니다.
+- Apple M1칩 이상의 CPU가 탑재된 MacOS 컴퓨터
+- R 버전이 4.2 이상인 Windows 컴퓨터
+
+의 경우 위의 코드 대신 아래의 코드를 실행시켜 줍니다.
 
 ```r
-remove.packages("rstan")
 if (file.exists(".RData")) file.remove(".RData")
+remove.packages("StanHeaders")
+remove.packages("rstan")
+install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 ```
 
@@ -176,8 +181,10 @@ Error in compileCode(f, code, language = language, verbose = verbose) :
 
 2. 사전에 `rstan`이 설치가 되어있다면 RStudio에서 다음의 명령문으로 `rstan`과 `StanHeaders`를 삭제합니다.
 
+```r
 remove.packages("rstan")
 remove.packages("StanHeaders")
+```
 
 3. `C:\BuildTools` 와 `C:\rtools(숫자)` 폴더를 삭제하신 후 아래 링크에서 Rtools42 를 설치합니다.
 
@@ -188,10 +195,12 @@ https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html
 
 5. 다음 명령문으로 `rstan`, `StanHeaders`의 최신 Release 버전을 설치합니다.
 
+```r
 install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-
+```
 
 6. 위에서 했던 [4. stanmodel object 컴파일 설정](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#4-stanmodel-object-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95)과 [5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)을 다시 실행해봅니다.
+
 
 기여자 : 이재귀, 김성민, 오정훈, 박수원
