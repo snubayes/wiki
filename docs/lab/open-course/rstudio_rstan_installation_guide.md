@@ -142,4 +142,56 @@ if(grepl("^linux", R.version$os)){
 
 그 후, 위에서 했던 [4. stanmodel object 컴파일 설정](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#4-stanmodel-object-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95)과 [5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)을 다시 실행해봅니다.
 
+### 6.1 윈도우 RTools, RBuildTools 에러
+
+윈도우 운영체제의 경우 다음과 같이 에러문에 RTools 및 RBuildTools 관련 에러가 발생할 수 있습니다.
+
+유형 1.
+
+```r
+Error in compileCode(f, code, language = language, verbose = verbose) :
+  C:\RBuildTools\...(중략)...
+  Error in sink(type = "output") : invalid connection
+```
+
+유형 2.
+
+```r
+Error in compileCode(f, code, language = language, verbose = verbose) :
+  C:\rtools42\...(중략)...
+  Error in sink(type = "output") : invalid connection
+```
+
+위에서 `C:\rtools42` 부분은 RTools 버전에 따라 다를 수 있습니다. 가령 RTools40의 경우 에러문은 다음과 같습니다.
+
+```r
+Error in compileCode(f, code, language = language, verbose = verbose) :
+  C:\rtools40\...(중략)...
+  Error in sink(type = "output") : invalid connection
+```
+
+이럴 경우 다음의 절차를 밟아보십시오.
+
+1. R 버전을 4.2로 업데이트 합니다.
+
+2. 사전에 `rstan`이 설치가 되어있다면 RStudio에서 다음의 명령문으로 `rstan`과 `StanHeaders`를 삭제합니다.
+
+remove.packages("rstan")
+remove.packages("StanHeaders")
+
+3. `C:\BuildTools` 와 `C:\rtools(숫자)` 폴더를 삭제하신 후 아래 링크에서 Rtools42 를 설치합니다.
+
+https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html
+
+
+4. RStudio 세션을 재실행 하거나 PC를 재실행합니다.
+
+5. 다음 명령문으로 `rstan`, `StanHeaders`의 최신 Release 버전을 설치합니다.
+
+install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+
+
+6. 위에서 했던 [4. stanmodel object 컴파일 설정](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#4-stanmodel-object-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95)과 [5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)을 다시 실행해봅니다.
+
 기여자 : 이재귀, 김성민, 오정훈, 박수원
