@@ -128,7 +128,7 @@ fit.indep =
 
 ## 6. 에러 발생 시
 
-[5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)단계에서 문제가 발생하면
+[5. RStan 작동 검증](#5-rstan-작동-검증)단계에서 문제가 발생하면
 아래의 코드를 실행해 Makevars 파일을 열어줍니다.
 
 ```r
@@ -145,7 +145,7 @@ if(grepl("^linux", R.version$os)){
 
 만약 Makevars 파일에 '-march=native'라고 쓰인 부분이 있다면 모두 삭제한 후 Makevars 파일을 저장합니다.
 
-그 후, 위에서 했던 [4. stanmodel object 컴파일 설정](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#4-stanmodel-object-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95)과 [5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)을 다시 실행해봅니다.
+그 후, 위에서 했던 [4. stanmodel object 컴파일 설정](#4-stanmodel-object-컴파일-설정)과 [5. RStan 작동 검증](#5-rstan-작동-검증)을 다시 실행해봅니다.
 
 ### 6.1 윈도우 RTools, RBuildTools 에러
 
@@ -200,7 +200,7 @@ install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", get
 install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 ```
 
-6. 위에서 했던 [4. stanmodel object 컴파일 설정](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#4-stanmodel-object-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95)과 [5. RStan 작동 검증](https://snubayes.github.io/wiki/docs/lab/open-course/rstudio_rstan_installation_guide/#5-rstan-%EC%9E%91%EB%8F%99-%EA%B2%80%EC%A6%9D)을 다시 실행해봅니다.
+6. 위에서 했던 [4. stanmodel object 컴파일 설정](#4-stanmodel-object-컴파일-설정)과 [5. RStan 작동 검증](#5-rstan-작동-검증)을 다시 실행해봅니다.
 
 
 기여자 : 이재귀, 김성민, 오정훈, 박수원
