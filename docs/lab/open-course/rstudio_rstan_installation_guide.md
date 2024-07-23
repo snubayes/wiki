@@ -6,12 +6,16 @@ tags:
 
 # R, RStudio 및 RStan 설치 가이드
 
-마지막 업데이트 : 2022.08.16
+마지막 업데이트 : 2024.07.23 (오정훈)
+
+작성자: 박수원
+
+기여자: 이재귀, 김성민, 박수원, 오정훈
 
 공개강좌를 위한 R, RStudio 및 RStan 설치 가이드 문서입니다.[^1]
 
-[^1]: 이 장의 많은 부분은 이재귀 학우와 김성민 학우가 기여한 'rstan 설치방법.pdf'를
-    참조하여 작성되었습니다.
+[^1]: 본 문서는 이재귀 학생과 김성민 학생의 'rstan 설치방법.pdf'를
+    참조하여 작성된 설치 가이드입니다.
 
 R, RStudio 및 RStan의 정책에 따라 설치 과정이 바뀌었을 수도 있으니 
 막히는 부분이 있으면 먼저 검색을 통해 문제를 해결해 보신 후에 문의 부탁드립니다.
@@ -63,7 +67,8 @@ install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", get
 install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 ```
 
-[RStan 한국어 깃헙 위키](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started-(%ED%95%9C%EA%B5%AD%EC%96%B4))에 가보시면 RStan 설치에 대한 상세한 설명을 보실 수 있습니다. 
+- [RStan 한국어 깃헙 위키](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started-(%ED%95%9C%EA%B5%AD%EC%96%B4))에 가보시면 RStan 설치에 대한 상세한 설명을 보실 수 있습니다. 
+- 최신화된 가이드는 영문으로 [Rstan Getting Started](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started)에서 확인하실 수 있습니다.
 
 ## 4. stanmodel object 컴파일 설정
 
@@ -177,7 +182,7 @@ Error in compileCode(f, code, language = language, verbose = verbose) :
 
 이럴 경우 다음의 절차를 밟아보십시오.
 
-1. R 버전을 4.2로 업데이트 합니다.
+1. R 버전을 4.2 혹은 4.3+로 업데이트 합니다.
 
 2. 사전에 `rstan`이 설치가 되어있다면 RStudio에서 다음의 명령문으로 `rstan`과 `StanHeaders`를 삭제합니다.
 
@@ -186,14 +191,14 @@ remove.packages("rstan")
 remove.packages("StanHeaders")
 ```
 
-3. `C:\BuildTools` 와 `C:\rtools(숫자)` 폴더를 삭제하신 후 아래 링크에서 Rtools42 를 설치합니다.
+3. `C:\BuildTools` 와 `C:\rtools(숫자)` 폴더를 삭제 후 아래 링크에서 나의 R 버전에 맞는 RTools 를 설치합니다.
+    - R version 4.2 : [RTools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) 설치
+    - R version 4.3+ : [Rtools43](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html) 설치
 
-https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html
 
+1. RStudio 세션을 재실행 하거나 PC를 재실행합니다.
 
-4. RStudio 세션을 재실행 하거나 PC를 재실행합니다.
-
-5. 다음 명령문으로 `rstan`, `StanHeaders`의 최신 Release 버전을 설치합니다.
+2. 다음 명령문으로 `rstan`, `StanHeaders`의 최신 Release 버전을 설치합니다.
 
 ```r
 install.packages("StanHeaders", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
@@ -201,6 +206,3 @@ install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption
 ```
 
 6. 위에서 했던 <a href="#4-stanmodel-object-컴파일-설정">4. stanmodel object 컴파일 설정</a>과 <a href="#5-rstan-작동-검증">5. RStan 작동 검증</a>을 다시 실행해봅니다.
-
-
-기여자 : 이재귀, 김성민, 오정훈, 박수원
